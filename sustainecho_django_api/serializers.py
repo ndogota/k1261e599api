@@ -13,7 +13,7 @@ class CitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = City
-        fields = ['city_name', 'brands']
+        fields = ['id', 'city_name', 'brands']
 
     def create(self, validated_data):
         brands_data = validated_data.pop('brands')
